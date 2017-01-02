@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dbH-0b-ot5">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--User-->
+        <scene sceneID="UDh-az-7aD">
+            <objects>
+                <controller identifier="User" hidesWhenLoading="NO" id="dbH-0b-ot5">
+                    <items>
+                        <group width="1" alignment="left" id="hqb-so-YhO">
+                            <items>
+                                <imageView width="40" height="40" alignment="left" image="Logo" id="aJ0-hL-3kC">
+                                    <color key="tintColor" red="1" green="0.25686071534371446" blue="0.62244630115209931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <group alignment="left" layout="vertical" spacing="0.0" id="tUw-tq-dtN">
+                                    <items>
+                                        <label alignment="left" text="User name" id="s10-FT-vyr">
+                                            <color key="textColor" red="1" green="0.25686071529999999" blue="0.6224463012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label alignment="left" text="Login" id="6hD-N9-bnU"/>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="6" bottom="0.0"/>
+                        </group>
+                        <group alignment="left" layout="vertical" id="WDY-sG-jv8">
+                            <items>
+                                <label alignment="left" text="Email" id="UH0-xg-Yr1"/>
+                                <label alignment="left" text="Since" id="c0f-4I-E97"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="pre-P1-1nJ">
+                            <items>
+                                <label alignment="left" verticalAlignment="bottom" text="345" id="0Wa-jV-xtq">
+                                    <color key="textColor" red="1" green="0.25686071534371446" blue="0.62244630115209931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="40"/>
+                                </label>
+                                <label alignment="left" verticalAlignment="center" text="repos" id="end-5K-bOg"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="yov-4h-vbu">
+                            <items>
+                                <group alignment="center" id="ue0-lz-P5g">
+                                    <items>
+                                        <button alignment="left" title="go to phone" id="dQF-nT-Emo"/>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="6"/>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="225" y="326"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="watchOS_example_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
