@@ -14,21 +14,17 @@
  * limitations under the License.
  */
 
-import UIKit
-import SwiftyJSON
+import Foundation
+import WatchKit
+import Kingfisher
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+extension UserViewModel {
+    func showAvatar(imageView view: WKInterfaceImage){
+        if let url = user?.avatar_url {
+            _ = KingfisherManager.shared.retrieveImage(with: URL(string: url)!, options: nil, progressBlock: nil) { (image, error, cacheType, imageURL) -> () in
+                view.setImage(image)
+            }
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
-

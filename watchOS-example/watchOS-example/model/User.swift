@@ -37,6 +37,7 @@ public class User {
     public var name : String?
     public var email : String?
     public var createdAt : Date?
+    public var repos : Int?
     
     public var since : Date? {
         get {
@@ -66,6 +67,7 @@ public class User {
         name = json["name"].string
         email = json["email"].string
         createdAt = json["created_at"].date
+        repos = json["public_repos"].int
     }
     
     

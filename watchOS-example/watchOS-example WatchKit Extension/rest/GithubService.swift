@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 Aptyr (github.com/aptyr)
+ * Copyright (C) 2016 Aptyr (github.com/aptyr)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,11 @@
  * limitations under the License.
  */
 
-import UIKit
-import SwiftyJSON
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+protocol GithubService {
+    
+    func getUsers(_ since:Int, callback: FetchUsersProtocol)
+    
+    func getUser(_ login: String, callback: FetchUserProtocol)
+    
 }
-

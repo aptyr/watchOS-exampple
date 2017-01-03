@@ -14,21 +14,26 @@
  * limitations under the License.
  */
 
-import UIKit
-import SwiftyJSON
+import Foundation
+import WatchKit
+import Kingfisher
 
-class ViewController: UIViewController {
+class UserInterfaceViewModel : FetchUserProtocol, UserViewModelProtocol {
+    
+    var view: UserViewProtocol?
+    
+    private let api : GithubAPI = GithubAPI()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    required init(view: UserViewProtocol) {
+        self.view = view
+        
+        api.getUser("aptyr", callback: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func userFetched(_ user: User?) {
+        if let user = user {
+            view?.invalidate(viewModel: UserViewModel(withUser: user))
+        }
     }
-
-
+    
 }
-

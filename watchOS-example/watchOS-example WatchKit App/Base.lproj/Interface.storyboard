@@ -12,13 +12,17 @@
         <!--User-->
         <scene sceneID="UDh-az-7aD">
             <objects>
-                <controller identifier="User" hidesWhenLoading="NO" id="dbH-0b-ot5">
+                <controller identifier="User" hidesWhenLoading="NO" id="dbH-0b-ot5" customClass="UserInterfaceController" customModule="watchOS_example_WatchKit_Extension">
                     <items>
                         <group width="1" alignment="left" id="hqb-so-YhO">
                             <items>
-                                <imageView width="40" height="40" alignment="left" image="Logo" id="aJ0-hL-3kC">
-                                    <color key="tintColor" red="1" green="0.25686071534371446" blue="0.62244630115209931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </imageView>
+                                <group alignment="left" radius="10" id="740-nN-9iV">
+                                    <items>
+                                        <imageView width="40" height="40" alignment="left" image="Logo" id="aJ0-hL-3kC">
+                                            <color key="tintColor" red="1" green="0.25686071534371446" blue="0.62244630115209931" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </imageView>
+                                    </items>
+                                </group>
                                 <group alignment="left" layout="vertical" spacing="0.0" id="tUw-tq-dtN">
                                     <items>
                                         <label alignment="left" text="User name" id="s10-FT-vyr">
@@ -49,13 +53,25 @@
                             <items>
                                 <group alignment="center" id="ue0-lz-P5g">
                                     <items>
-                                        <button alignment="left" title="go to phone" id="dQF-nT-Emo"/>
+                                        <button alignment="left" title="go to phone" id="dQF-nT-Emo">
+                                            <connections>
+                                                <action selector="buttonClick" destination="dbH-0b-ot5" id="jAa-aT-laA"/>
+                                            </connections>
+                                        </button>
                                     </items>
                                 </group>
                             </items>
                             <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="6"/>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="avatar" destination="aJ0-hL-3kC" id="zdp-ih-dYb"/>
+                        <outlet property="email" destination="UH0-xg-Yr1" id="gBB-1q-hC8"/>
+                        <outlet property="login" destination="6hD-N9-bnU" id="7Ho-Kv-ldx"/>
+                        <outlet property="name" destination="s10-FT-vyr" id="OAT-Az-pKd"/>
+                        <outlet property="repos" destination="0Wa-jV-xtq" id="VzV-sv-PMZ"/>
+                        <outlet property="since" destination="c0f-4I-E97" id="g3B-2g-Gae"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="225" y="326"/>

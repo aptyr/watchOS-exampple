@@ -27,6 +27,14 @@
 		75C2E9291E1EF63E0083BC7D /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9251E1EF6150083BC7D /* DateFormatter.swift */; };
 		75C2E92A1E1EF63E0083BC7D /* SwiftyJSON+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9261E1EF6150083BC7D /* SwiftyJSON+Date.swift */; };
 		75C2E92C1E1F00350083BC7D /* UserInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E92B1E1F00350083BC7D /* UserInterfaceController.swift */; };
+		75C2E9301E1F95080083BC7D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E92F1E1F95080083BC7D /* UserViewModel.swift */; };
+		75C2E9311E1F95190083BC7D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E92F1E1F95080083BC7D /* UserViewModel.swift */; };
+		75C2E9341E1F958E0083BC7D /* UserInterfaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9331E1F958E0083BC7D /* UserInterfaceViewModel.swift */; };
+		75C2E9381E1F999A0083BC7D /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9361E1F999A0083BC7D /* GithubAPI.swift */; };
+		75C2E9391E1F999A0083BC7D /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9371E1F999A0083BC7D /* GithubService.swift */; };
+		75C2E93B1E1F9AA00083BC7D /* UserViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */; };
+		75C2E93D1E1FACC50083BC7D /* UserViewModel+Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */; };
+		75C2E93F1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E93E1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift */; };
 		A3F74DA53D3DE0C905DF7FD2 /* Pods_defaults_watchOS_example_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B7910F43B5F61A24A21785 /* Pods_defaults_watchOS_example_WatchKit_Extension.framework */; };
 		EBB8A7A9A3E283379025ECBD /* Pods_watchOS_example_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C237990ECE5D6B62B4CF93 /* Pods_watchOS_example_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
@@ -101,6 +109,13 @@
 		75C2E9251E1EF6150083BC7D /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = utils/DateFormatter.swift; sourceTree = "<group>"; };
 		75C2E9261E1EF6150083BC7D /* SwiftyJSON+Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SwiftyJSON+Date.swift"; path = "utils/SwiftyJSON+Date.swift"; sourceTree = "<group>"; };
 		75C2E92B1E1F00350083BC7D /* UserInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInterfaceController.swift; path = view/UserInterfaceController.swift; sourceTree = "<group>"; };
+		75C2E92F1E1F95080083BC7D /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewModel.swift; path = viewmodel/UserViewModel.swift; sourceTree = "<group>"; };
+		75C2E9331E1F958E0083BC7D /* UserInterfaceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserInterfaceViewModel.swift; path = viewmodel/UserInterfaceViewModel.swift; sourceTree = "<group>"; };
+		75C2E9361E1F999A0083BC7D /* GithubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubAPI.swift; path = rest/GithubAPI.swift; sourceTree = "<group>"; };
+		75C2E9371E1F999A0083BC7D /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubService.swift; path = rest/GithubService.swift; sourceTree = "<group>"; };
+		75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewModelContract.swift; path = viewmodel/UserViewModelContract.swift; sourceTree = "<group>"; };
+		75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserViewModel+Avatar.swift"; path = "viewmodel/UserViewModel+Avatar.swift"; sourceTree = "<group>"; };
+		75C2E93E1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserViewModel+Avatar.swift"; path = "viewmodel/UserViewModel+Avatar.swift"; sourceTree = "<group>"; };
 		77B7910F43B5F61A24A21785 /* Pods_defaults_watchOS_example_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_watchOS_example_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7640DD452D3E396371409D /* Pods-watchOS-example WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS-example WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS-example WatchKit App/Pods-watchOS-example WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		8C66D9E713C425A82CF78846 /* Pods_defaults_watchOS_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_watchOS_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +197,7 @@
 		75C2E8E41E1E93ED0083BC7D /* watchOS-example */ = {
 			isa = PBXGroup;
 			children = (
+				75C2E92E1E1F94CD0083BC7D /* viewmodel */,
 				75C2E9241E1EF5F90083BC7D /* utils */,
 				75C2E9201E1E9D250083BC7D /* model */,
 				75C2E8E51E1E93ED0083BC7D /* AppDelegate.swift */,
@@ -207,6 +223,8 @@
 		75C2E9071E1E93ED0083BC7D /* watchOS-example WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				75C2E9351E1F99880083BC7D /* rest */,
+				75C2E9321E1F955F0083BC7D /* viewmodel */,
 				75C2E92D1E1F003F0083BC7D /* view */,
 				75C2E90C1E1E93ED0083BC7D /* ExtensionDelegate.swift */,
 				75C2E90E1E1E93ED0083BC7D /* NotificationController.swift */,
@@ -248,6 +266,34 @@
 				75C2E92B1E1F00350083BC7D /* UserInterfaceController.swift */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		75C2E92E1E1F94CD0083BC7D /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				75C2E92F1E1F95080083BC7D /* UserViewModel.swift */,
+				75C2E93E1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift */,
+			);
+			name = viewmodel;
+			sourceTree = "<group>";
+		};
+		75C2E9321E1F955F0083BC7D /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */,
+				75C2E9331E1F958E0083BC7D /* UserInterfaceViewModel.swift */,
+				75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */,
+			);
+			name = viewmodel;
+			sourceTree = "<group>";
+		};
+		75C2E9351E1F99880083BC7D /* rest */ = {
+			isa = PBXGroup;
+			children = (
+				75C2E9361E1F999A0083BC7D /* GithubAPI.swift */,
+				75C2E9371E1F999A0083BC7D /* GithubService.swift */,
+			);
+			name = rest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,9 +564,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				75C2E9271E1EF6150083BC7D /* DateFormatter.swift in Sources */,
+				75C2E9301E1F95080083BC7D /* UserViewModel.swift in Sources */,
 				75C2E9281E1EF6150083BC7D /* SwiftyJSON+Date.swift in Sources */,
 				75C2E8E81E1E93ED0083BC7D /* ViewController.swift in Sources */,
 				75C2E8E61E1E93ED0083BC7D /* AppDelegate.swift in Sources */,
+				75C2E93F1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift in Sources */,
 				75C2E9221E1E9D4C0083BC7D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,8 +580,14 @@
 				75C2E92C1E1F00350083BC7D /* UserInterfaceController.swift in Sources */,
 				75C2E9291E1EF63E0083BC7D /* DateFormatter.swift in Sources */,
 				75C2E92A1E1EF63E0083BC7D /* SwiftyJSON+Date.swift in Sources */,
+				75C2E9341E1F958E0083BC7D /* UserInterfaceViewModel.swift in Sources */,
+				75C2E93B1E1F9AA00083BC7D /* UserViewModelContract.swift in Sources */,
 				75C2E9231E1E9D590083BC7D /* User.swift in Sources */,
 				75C2E90F1E1E93ED0083BC7D /* NotificationController.swift in Sources */,
+				75C2E9311E1F95190083BC7D /* UserViewModel.swift in Sources */,
+				75C2E9381E1F999A0083BC7D /* GithubAPI.swift in Sources */,
+				75C2E9391E1F999A0083BC7D /* GithubService.swift in Sources */,
+				75C2E93D1E1FACC50083BC7D /* UserViewModel+Avatar.swift in Sources */,
 				75C2E90D1E1E93ED0083BC7D /* ExtensionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
