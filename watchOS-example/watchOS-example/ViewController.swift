@@ -15,24 +15,41 @@
  */
 
 import UIKit
-import SwiftyJSON
 import Foundation
 
 class ViewController: UIViewController{
 
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var login: UILabel!
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var since: UILabel!
+    @IBOutlet weak var repos: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let watch = WatchConnectivityController.shared
         watch.start()
-        watch.userHandler { print("\(User(dict: $0))")        }
+        watch.userHandler {
+            self.invalidate(viewModel: UserViewModel(withUser: User(dict: $0)))
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    private func invalidate(viewModel: UserViewModel){
+        DispatchQueue.main.async(execute: {
+            viewModel.showAvatar(imageView: self.avatar)
+            self.name.text = viewModel.name
+            self.login.text = viewModel.login
+            self.email.text = viewModel.email
+            self.since.text = viewModel.registerDate
+            self.repos.text = viewModel.repos
+        })
     }
 
 
 }
-

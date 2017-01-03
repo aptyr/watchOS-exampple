@@ -15,3 +15,13 @@
  */
 
 import Foundation
+import Kingfisher
+
+extension UserViewModel {
+    func showAvatar(imageView view: UIImageView){
+        if let url = user?.avatar_url {
+            view.kf.setImage(with: URL(string: url), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+        }
+        
+    }
+}

@@ -71,11 +71,4 @@ class UserViewModel {
         self.user = user
     }
     
-//    func showAvatar(imageView view: UIImageView){
-//        if let url = user?.avatar_url {
-//            view.kf.setImage(with: URL(string: url), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
-//        }
-//        
-//    }
-    
 }
