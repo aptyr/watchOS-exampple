@@ -16,12 +16,16 @@
 
 import UIKit
 import SwiftyJSON
+import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let watch = WatchConnectivityController.shared
+        watch.start()
+        watch.userHandler { print("\(User(dict: $0))")        }
     }
 
     override func didReceiveMemoryWarning() {

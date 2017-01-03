@@ -36,7 +36,7 @@ class GithubAPI : GithubService {
         Alamofire.request(GithubAPI.SERVICE_ENDPOINT + "?since=\(since)").responseJSON { response in
             if let jsonValue = response.result.value {
                 var result = [User]()
-                JSON(jsonValue).arrayValue.forEach { result.append(User(json: $0)!) }
+                JSON(jsonValue).arrayValue.forEach { result.append(User(json: $0)) }
                 callback.usersFetched(result)
             }
         }

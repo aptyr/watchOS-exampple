@@ -15,8 +15,7 @@
  */
 
 import Foundation
-import WatchKit
-import Kingfisher
+import WatchConnectivity
 
 class UserInterfaceViewModel : FetchUserProtocol, UserViewModelProtocol {
     

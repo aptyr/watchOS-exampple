@@ -21,6 +21,7 @@ import Foundation
 class UserInterfaceController: WKInterfaceController, UserViewProtocol {
 
     var viewModel : UserViewModelProtocol!
+    var vm : UserViewModel?
     
     @IBOutlet var name: WKInterfaceLabel!
     @IBOutlet var login: WKInterfaceLabel!
@@ -29,9 +30,10 @@ class UserInterfaceController: WKInterfaceController, UserViewProtocol {
     @IBOutlet var repos: WKInterfaceLabel!
     
     @IBOutlet var avatar: WKInterfaceImage!
-    
+    let watch = WatchConnectivityController.shared
+
     @IBAction func buttonClick() {
-        
+        watch.sendMessage(message: ["user" : vm!.user!.asDict()])
     }
     
     
@@ -39,6 +41,7 @@ class UserInterfaceController: WKInterfaceController, UserViewProtocol {
         super.awake(withContext: context)
         
         viewModel = UserInterfaceViewModel(view: self)
+        watch.start()
     }
 
     override func willActivate() {
@@ -52,6 +55,7 @@ class UserInterfaceController: WKInterfaceController, UserViewProtocol {
     }
     
     func invalidate(viewModel: UserViewModel) {
+        vm = viewModel
         name.setText(viewModel.name)
         login.setText(viewModel.login)
         email.setText(viewModel.email)

@@ -35,6 +35,8 @@
 		75C2E93B1E1F9AA00083BC7D /* UserViewModelContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */; };
 		75C2E93D1E1FACC50083BC7D /* UserViewModel+Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */; };
 		75C2E93F1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E93E1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift */; };
+		75C2E9411E1FC3FE0083BC7D /* WatchConnectivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9401E1FC3FE0083BC7D /* WatchConnectivityController.swift */; };
+		75C2E9421E1FC6D00083BC7D /* WatchConnectivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C2E9401E1FC3FE0083BC7D /* WatchConnectivityController.swift */; };
 		A3F74DA53D3DE0C905DF7FD2 /* Pods_defaults_watchOS_example_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B7910F43B5F61A24A21785 /* Pods_defaults_watchOS_example_WatchKit_Extension.framework */; };
 		EBB8A7A9A3E283379025ECBD /* Pods_watchOS_example_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C237990ECE5D6B62B4CF93 /* Pods_watchOS_example_WatchKit_App.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +118,7 @@
 		75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewModelContract.swift; path = viewmodel/UserViewModelContract.swift; sourceTree = "<group>"; };
 		75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserViewModel+Avatar.swift"; path = "viewmodel/UserViewModel+Avatar.swift"; sourceTree = "<group>"; };
 		75C2E93E1E1FAD2B0083BC7D /* UserViewModel+Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UserViewModel+Avatar.swift"; path = "viewmodel/UserViewModel+Avatar.swift"; sourceTree = "<group>"; };
+		75C2E9401E1FC3FE0083BC7D /* WatchConnectivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WatchConnectivityController.swift; path = utils/WatchConnectivityController.swift; sourceTree = "<group>"; };
 		77B7910F43B5F61A24A21785 /* Pods_defaults_watchOS_example_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_watchOS_example_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B7640DD452D3E396371409D /* Pods-watchOS-example WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watchOS-example WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watchOS-example WatchKit App/Pods-watchOS-example WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		8C66D9E713C425A82CF78846 /* Pods_defaults_watchOS_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_defaults_watchOS_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +259,7 @@
 			children = (
 				75C2E9251E1EF6150083BC7D /* DateFormatter.swift */,
 				75C2E9261E1EF6150083BC7D /* SwiftyJSON+Date.swift */,
+				75C2E9401E1FC3FE0083BC7D /* WatchConnectivityController.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -565,6 +569,7 @@
 			files = (
 				75C2E9271E1EF6150083BC7D /* DateFormatter.swift in Sources */,
 				75C2E9301E1F95080083BC7D /* UserViewModel.swift in Sources */,
+				75C2E9411E1FC3FE0083BC7D /* WatchConnectivityController.swift in Sources */,
 				75C2E9281E1EF6150083BC7D /* SwiftyJSON+Date.swift in Sources */,
 				75C2E8E81E1E93ED0083BC7D /* ViewController.swift in Sources */,
 				75C2E8E61E1E93ED0083BC7D /* AppDelegate.swift in Sources */,
@@ -585,6 +590,7 @@
 				75C2E9231E1E9D590083BC7D /* User.swift in Sources */,
 				75C2E90F1E1E93ED0083BC7D /* NotificationController.swift in Sources */,
 				75C2E9311E1F95190083BC7D /* UserViewModel.swift in Sources */,
+				75C2E9421E1FC6D00083BC7D /* WatchConnectivityController.swift in Sources */,
 				75C2E9381E1F999A0083BC7D /* GithubAPI.swift in Sources */,
 				75C2E9391E1F999A0083BC7D /* GithubService.swift in Sources */,
 				75C2E93D1E1FACC50083BC7D /* UserViewModel+Avatar.swift in Sources */,

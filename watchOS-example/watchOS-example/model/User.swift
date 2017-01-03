@@ -16,24 +16,10 @@
 
 import SwiftyJSON
 
-public class User {
+class User : NSObject {
     public var login : String?
     public var id : Int?
     public var avatar_url : String?
-    public var gravatar_id : String?
-    public var url : String?
-    public var html_url : String?
-    public var followers_url : String?
-    public var following_url : String?
-    public var gists_url : String?
-    public var starred_url : String?
-    public var subscriptions_url : String?
-    public var organizations_url : String?
-    public var repos_url : String?
-    public var events_url : String?
-    public var received_events_url : String?
-    public var type : String?
-    public var site_admin : String?
     public var name : String?
     public var email : String?
     public var createdAt : Date?
@@ -45,32 +31,46 @@ public class User {
         }
     }
     
-    required public init?(json:JSON) {
+    init(json:JSON) {
         
         login = json["login"].string
         id = json["id"].int
         avatar_url = json["avatar_url"].string
-        gravatar_id = json["gravatar_id"].string
-        url = json["url"].string
-        html_url = json["html_url"].string
-        followers_url = json["followers_url"].string
-        following_url = json["following_url"].string
-        gists_url = json["gists_url"].string
-        starred_url = json["starred_url"].string
-        subscriptions_url = json["subscriptions_url"].string
-        organizations_url = json["organizations_url"].string
-        repos_url = json["repos_url"].string
-        events_url = json["events_url"].string
-        received_events_url = json["received_events_url"].string
-        type = json["type"].string
-        site_admin = json["site_admin"].string
         name = json["name"].string
         email = json["email"].string
         createdAt = json["created_at"].date
         repos = json["public_repos"].int
     }
     
+    init(dict: [String: Any]) {
+        print("dict: \(dict)")
+        login = dict["login"] as! String?
+        id = dict["id"] as! Int?
+        avatar_url = dict["avatar_url"] as! String?
+        name = dict["name"] as! String?
+        email = dict["email"] as! String?
+        createdAt = dict["created_at"] as! Date?
+        repos = dict["public_repos"] as! Int?
+    }
+    
+    func asDict() -> [String: AnyObject] {
+        var dict : [String: AnyObject] = [:]
+        
+        dict["login"] = login as AnyObject?
+        dict["id"] = id as AnyObject?
+        dict["avatar_url"] = avatar_url as AnyObject?
+        dict["name"] = name as AnyObject?
+        dict["email"] = email as AnyObject?
+        dict["created_at"] = createdAt as AnyObject?
+        dict["public_repos"] = repos as AnyObject?
+        print("dict: \(dict)")
+
+        return dict
+    }
     
     
+    override var description: String {
+        return "\(login) : \(name) : \(since)"
+    }
     
 }
