@@ -46,9 +46,11 @@
                                     </connections>
                                 </button>
                             </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="6"/>
                         </group>
                     </items>
                     <connections>
+                        <outlet property="button" destination="gOy-4w-nQs" id="aAV-sk-loI"/>
                         <outlet property="table" destination="EZf-Y0-XB3" id="DXr-4q-00W"/>
                     </connections>
                 </controller>

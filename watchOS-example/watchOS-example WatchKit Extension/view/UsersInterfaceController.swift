@@ -24,7 +24,10 @@ class UsersInterfaceController: WKInterfaceController, UsersViewProtocol {
     
     @IBOutlet var table: WKInterfaceTable!
     
+    @IBOutlet var button: WKInterfaceButton!
+    
     @IBAction func loadMore() {
+        button.setTitle("Fetching...")
         viewModel.loadMore()
     }
     
@@ -49,6 +52,8 @@ class UsersInterfaceController: WKInterfaceController, UsersViewProtocol {
     }
     
     func invalidate(_ indexSet: IndexSet) {
+        button.setTitle("Load more")
+        
         table.insertRows(at: indexSet, withRowType: "UserRow")
         
         for index in 0..<table.numberOfRows {

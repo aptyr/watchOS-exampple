@@ -294,11 +294,8 @@
 		75C2E9321E1F955F0083BC7D /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
-				75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */,
-				75C2E9331E1F958E0083BC7D /* UserInterfaceViewModel.swift */,
-				75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */,
-				75C2E9481E20430F0083BC7D /* UsersInterfaceViewModel.swift */,
-				75C2E94A1E20435A0083BC7D /* UsersViewModelContract.swift */,
+				75C2E94D1E2055BF0083BC7D /* users */,
+				75C2E94C1E2055BA0083BC7D /* user */,
 			);
 			name = viewmodel;
 			sourceTree = "<group>";
@@ -310,6 +307,25 @@
 				75C2E9371E1F999A0083BC7D /* GithubService.swift */,
 			);
 			name = rest;
+			sourceTree = "<group>";
+		};
+		75C2E94C1E2055BA0083BC7D /* user */ = {
+			isa = PBXGroup;
+			children = (
+				75C2E93A1E1F9AA00083BC7D /* UserViewModelContract.swift */,
+				75C2E9331E1F958E0083BC7D /* UserInterfaceViewModel.swift */,
+				75C2E93C1E1FACC50083BC7D /* UserViewModel+Avatar.swift */,
+			);
+			name = user;
+			sourceTree = "<group>";
+		};
+		75C2E94D1E2055BF0083BC7D /* users */ = {
+			isa = PBXGroup;
+			children = (
+				75C2E9481E20430F0083BC7D /* UsersInterfaceViewModel.swift */,
+				75C2E94A1E20435A0083BC7D /* UsersViewModelContract.swift */,
+			);
+			name = users;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
