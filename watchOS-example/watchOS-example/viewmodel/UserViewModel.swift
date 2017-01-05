@@ -18,7 +18,7 @@ import Foundation
 
 class UserViewModel {
     
-    internal var user : User?
+    var user : User?
     
     var login : String? {
         get {

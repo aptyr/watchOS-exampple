@@ -14,27 +14,16 @@
  * limitations under the License.
  */
 
-import Foundation
-import WatchConnectivity
+import WatchKit
 
-class UserInterfaceViewModel : FetchUserProtocol, UserViewModelProtocol {
+class UserRowController: NSObject {
+
+    @IBOutlet var avatar: WKInterfaceImage!
+    @IBOutlet var login: WKInterfaceLabel!
     
-    private var view: UserViewProtocol?
     
-    private let api : GithubAPI = GithubAPI()
-
-    required init(view: UserViewProtocol, withUser user: User) {
-        self.view = view
-        
-        api.getUser(user.login!, callback: self)
-        view.invalidate(viewModel: UserViewModel(withUser: user))
-
+    func invalidate(viewModel: UserViewModel){
+        viewModel.showAvatar(imageView: avatar)
+        login.setText(viewModel.login)
     }
-    
-    func userFetched(_ user: User?) {
-        if let user = user {
-            view?.invalidate(viewModel: UserViewModel(withUser: user))
-        }
-    }
-    
 }

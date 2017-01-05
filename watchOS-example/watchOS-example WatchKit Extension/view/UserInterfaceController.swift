@@ -40,8 +40,12 @@ class UserInterfaceController: WKInterfaceController, UserViewProtocol {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
-        viewModel = UserInterfaceViewModel(view: self)
-        watch.start()
+        if let user = context as? User {
+            viewModel = UserInterfaceViewModel(view: self, withUser: user)
+            watch.start()
+        }
+        
+       
     }
 
     override func willActivate() {

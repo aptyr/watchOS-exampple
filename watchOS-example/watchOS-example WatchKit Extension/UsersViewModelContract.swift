@@ -15,26 +15,16 @@
  */
 
 import Foundation
-import WatchConnectivity
 
-class UserInterfaceViewModel : FetchUserProtocol, UserViewModelProtocol {
+protocol UsersViewProtocol {
     
-    private var view: UserViewProtocol?
+    func invalidate(_ indexSet: IndexSet)
     
-    private let api : GithubAPI = GithubAPI()
+}
 
-    required init(view: UserViewProtocol, withUser user: User) {
-        self.view = view
-        
-        api.getUser(user.login!, callback: self)
-        view.invalidate(viewModel: UserViewModel(withUser: user))
-
-    }
+protocol UsersViewModelProtocol {
     
-    func userFetched(_ user: User?) {
-        if let user = user {
-            view?.invalidate(viewModel: UserViewModel(withUser: user))
-        }
-    }
+    var dataSource : [UserViewModel] { get }
     
+    func loadMore()
 }
